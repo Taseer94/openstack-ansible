@@ -1,27 +1,9 @@
 ---
 
-- name: installing dependant packages
-  apt:
-   name: "{{ item }}"
-   with_items:
-     - git
-     - gcc
-     - python-dev
-     - python-antlr
-     - libxml2
-     - libxslt1-dev
-     - libzip-dev
-     - build-essential
-     - libssl-dev
-     - libffi-dev
-
-- name: cloning congress
-  git: 
-    repo: https://github.com/Taseer94/openstack-ansible.git
-    clone: yes
-
-- name: change directory to congress
-  shell: cd congress
-
-- name: install congress
-  shell: python setup.py install
+- name: install congress components
+  hosts: congress_all
+  gather_facts: "{{ gather_facts | default(True) }}"
+  max_fail_percentage: 20
+  user: root
+  pre_tasks:
+    - include: common-tasks/lxc-container-setup.yml
