@@ -215,3 +215,8 @@ molteniron_git_project_group: molteniron_all
 tacker_git_repo: https://git.openstack.org/openstack/tacker
 tacker_git_install_branch: cace849103845bc56cf646ed90b9af60d6624d15 # HEAD of "master" as of 04.09.2017
 tacker_git_project_group: tacker_all
+
+## Congress service
+congress_git_repo: https://git.openstack.org/openstack/congress
+congress_git_install_branch: master
+congress_git_project_group: congress_all
