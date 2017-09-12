@@ -202,3 +202,7 @@
   scm: git
   src: https://git.openstack.org/openstack/openstack-ansible-os_tacker
   version: master
+- name: os_congress
+  scm: git
+  src: https://github.com/Taseer94/os_congress
+  version: master
