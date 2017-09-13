@@ -283,3 +283,13 @@ haproxy_default_services:
         - "forwardfor"
         - "httpchk"
         - "httplog"
+  - service:
+    haproxy_service_name: congress
+    haproxy_backend_nodes: "{{ groups['congress_all'] | default([]) }}"
+    haproxy_ssl: "{{ haproxy_ssl }}"
+    haproxy_port: 9988
+    haproxy_balance_type: http
+    haproxy_backend_options:
+      - "forwardfor"
+      - "httpschk"
+      - "httplog"
