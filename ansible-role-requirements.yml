@@ -1,6 +1,6 @@
 - name: ansible-hardening
   scm: git
-  src: https://git.openstack.org/openstack/ansible-hardening
+  src: https://github.com/Taseer94/ansible-hardening
   version: master
 - name: apt_package_pinning
   scm: git

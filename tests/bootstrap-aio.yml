@@ -69,6 +69,8 @@
         - name: keystone.yml.aio
         - name: heat.yml.aio
         - name: tacker.yml.aio
+      congress:
+        - name: congress.yml.aio
     pip_install_upper_constraints_proto: "{{ ansible_python_version | version_compare('2.7.9', '>=') | ternary('https','http') }}"
     sftp_subsystem:
         'apt': 'sftp /usr/lib/openssh/sftp-server'

@@ -7,3 +7,5 @@
   user: root
   pre_tasks:
     - include: common-tasks/lxc-container-setup.yml
+  roles:
+    - role: os_congress
