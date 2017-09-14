@@ -1,4 +1,4 @@
 ---
-policy-hosts:
+policy_hosts:
   aio:
     ip: 172.29.236.100
