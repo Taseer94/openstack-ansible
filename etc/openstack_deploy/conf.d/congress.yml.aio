@@ -1,4 +1,4 @@
 ---
 policy_hosts:
-  aio:
+  aio1:
     ip: 172.29.236.100
