@@ -19,7 +19,7 @@
   gather_facts: "{{ gather_facts | default(True) }}"
   max_fail_percentage: 20
   user: root
-#  pre_tasks:
-#    - include: common-tasks/lxc-container-setup.yml
+  pre_tasks:
+    - include: common-tasks/lxc-container-setup.yml
   roles:
     - role: os_congress
