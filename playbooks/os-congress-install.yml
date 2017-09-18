@@ -22,4 +22,4 @@
   pre_tasks:
     - include: common-tasks/os-lxc-container-setup.yml
   roles:
-    - role: os_congress
+    - role: "os_congress"
