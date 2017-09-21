@@ -13,7 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-- include: os-congress-install.yml
 - include: os-keystone-install.yml
 - include: os-barbican-install.yml
 - include: os-glance-install.yml
@@ -41,6 +40,7 @@
 - include: os-molteniron-install.yml
 - include: os-octavia-install.yml
 - include: os-tacker-install.yml
+- include: os-congress-install.yml
 - include: os-tempest-install.yml
   when: (tempest_install | default(False)) | bool or (tempest_run | default(False)) | bool
 
