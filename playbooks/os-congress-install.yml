@@ -21,5 +21,13 @@
   user: root
   pre_tasks:
     - include: common-tasks/os-lxc-container-setup.yml
+    - include: common-tasks/mysql-db-user.yml
+      static: no
+      vars:
+        user_name: "{{ congress_galera_user }}"
+        password: "{{ congress_container_mysql_password }}"
+        login_host: "{{ congress_galera_address }}"
+        db_name: "{{ congress_galera_database }}"
+      when: inventory_hostname == groups['congress_all'][0]
   roles:
     - role: "os_congress"
