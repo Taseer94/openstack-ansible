@@ -1,5 +1,5 @@
 ---
-# Copyright 2017, Rackspace US, Inc.
+# Copyright 2017, Logan Vig <logan2211@gmail.com>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,11 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Consumed by Neutron role and must remained scoped to 'all' group
-nova_metadata_port: 8775
-nova_service_region: "{{ service_region }}"
-nova_service_user_name: nova
-nova_service_project_name: service
-nova_service_project_domain_id: default
-nova_service_user_domain_id: default
-nova_keystone_auth_plugin: password
+resolvconf_enabled: "{{ groups['unbound'] is defined and groups['unbound'] | length > 0 }}"
+unbound_physical_hosts: >-
+  {{ groups[resolvconf_resolver_group] |
+    map('extract', hostvars, 'physical_host') |
+    select('defined') |
+    list
+  }}
