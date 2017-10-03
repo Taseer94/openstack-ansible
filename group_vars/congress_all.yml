@@ -19,9 +19,9 @@ congress_service_region: "{{ service_region }}"
 congress_service_in_ldap: "{{ service_ldap_backend_enabled }}"
 
 # MariaDB details for the congress service
-congress_galera_user: glance
-congress_galera_database: glance
-congress_galera_address: "{{ galera_address }}"
+congress_galera_user: congress
+congress_galera_database: congress
+congress_galera_address: "{{ congress_address }}"
 
 congress_aodh_enabled: "{{ groups['aodh_all'] is defined and groups['aodh_all'] | length > 0 }}"
 congress_gnocchi_enabled: "{{ groups['gnocchi_all'] is defined and groups['gnocchi_all'] | length > 0 }}"
