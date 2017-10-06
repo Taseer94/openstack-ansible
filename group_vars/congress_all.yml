@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-congress_service_publicuri: "{{ openstack_service_publicuri_proto|default(congres_service_proto) }}://{{ external_lb_vip_address }}:{{ congres_service_port }}"
+congress_service_publicuri: "{{ openstack_service_publicuri_proto|default(congress_service_proto) }}://{{ external_lb_vip_address }}:{{ congress_service_port }}"
 congress_service_adminurl: "{{ congress_service_adminuri }}/"
 congress_service_region: "{{ service_region }}"
 congress_service_in_ldap: "{{ service_ldap_backend_enabled }}"
