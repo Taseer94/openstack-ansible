@@ -216,5 +216,5 @@
   version: master
 - name: os_congress
   scm: git
-  src: https://github.com/Taseer94/os_congress
+  src: https://github.com/Taseer94/openstack-ansible-os_congress
   version: master
